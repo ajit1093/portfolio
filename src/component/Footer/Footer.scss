@@ -1,0 +1,44 @@
+.footer {
+    background-color:#181818; // Dark blue background
+    color: #ecf0f1; // Light text color
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+  
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+  
+      p {
+        margin: 0;
+        font-size: 14px;
+      }
+  
+      .social-links {
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        gap: 20px; // Space between icons
+  
+        a {
+          color: #ecf0f1; // Light color for icons
+          text-decoration: none;
+          transition: transform 0.3s ease, color 0.3s ease;
+  
+          .social-icon {
+            font-size: 24px; // Icon size
+            transition: transform 0.3s ease, color 0.3s ease;
+          }
+  
+          &:hover {
+            color: #3498db; // Change icon color on hover
+  
+            .social-icon {
+              transform: translateY(-5px); // Bounce effect
+            }
+          }
+        }
+      }
+    }
+  }

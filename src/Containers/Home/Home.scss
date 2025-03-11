@@ -1,0 +1,153 @@
+// Variables
+$primary-color: #3498db;
+$accent-color: #3498db;
+$background-color: #ecf0f1;
+$text-color: #1bc3e9;
+$white: #ffffff;
+
+// Keyframes for Animation
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px rgba($accent-color, 0.7);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba($accent-color, 0.9);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba($accent-color, 0.7);
+  }
+}
+
+// Hero Section
+.home {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px); // Adjust based on your navbar height
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  max-width: 1200px;
+  width: 100%;
+
+  .hero-content {
+    max-width: 600px;
+
+    h1 {
+      font-size: 5rem; // Bigger font size
+      color: lighten($primary-color, 10%); // Lighter font color
+      margin-bottom: 1rem;
+      animation: fadeIn 1.5s ease-out, glow 3s infinite; // Add animations
+    }
+
+    h2 {
+      font-size: 3rem;
+      color: $accent-color;
+      margin-bottom: 1.5rem;
+      animation: fadeIn 2s ease-out; // Add animation
+    }
+
+    h3 {
+      font-size: 2rem;
+      color: lighten($text-color, 20%); // Lighter font color
+      margin-bottom: 2rem;
+      line-height: 1.6;
+      animation: fadeIn 2.5s ease-out; // Add animation
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      animation: fadeIn 3s ease-out; // Add animation
+
+      .cta-button {
+        padding: 0.8rem 1.8rem;
+        font-size: 2rem;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+
+        &.outline {
+          background-color: transparent;
+          border: 2px solid $accent-color;
+          color: $accent-color;
+
+          &:hover {
+            background-color: $accent-color;
+            color: $white;
+          }
+        }
+
+        &:not(.outline) {
+          background-color: $accent-color;
+          color: $white;
+
+          &:hover {
+            background-color: darken($accent-color, 10%);
+          }
+        }
+      }
+    }
+  }
+
+  .hero-image {
+    img {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 2s ease-out; // Add animation
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+
+    .hero-content {
+      h1 {
+        font-size: 3rem; // Adjusted for mobile
+      }
+
+      h2 {
+        font-size: 1.75rem;
+      }
+
+      h3 {
+        font-size: 1rem;
+      }
+
+      .cta-buttons {
+        justify-content: center;
+      }
+    }
+
+    .hero-image {
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  }
+}

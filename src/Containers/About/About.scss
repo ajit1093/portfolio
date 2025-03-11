@@ -1,0 +1,122 @@
+// AboutMe.scss
+.about-me {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 3rem;
+    text-align: center;
+    background:#181818;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    }
+  
+    .profile-image {
+      width: 180px;
+      height: 180px;
+      margin: 0 auto 2rem;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 5px solid #007bff;
+  
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  
+    h1 {
+      font-size: 4rem; // Increased heading size
+      color: #181;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+    }
+  
+    p {
+      font-size: 1.5rem; // Increased paragraph text size
+      color: #ffff;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      text-align: left;
+  
+      strong {
+        color: #007bff;
+        font-weight: 600;
+      }
+    }
+  
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+  
+      a {
+        text-decoration: none;
+        color: #007bff;
+        font-size: 1.5rem; // Increased font size for social links
+        font-weight: 600;
+        padding: 0.75rem 1.5rem;
+        border: 2px solid #007bff;
+        border-radius: 30px;
+        transition: background 0.3s ease, color 0.3s ease;
+  
+        &:hover {
+          background: #007bff;
+          color: #fff;
+        }
+      }
+    }
+  }
+  
+  // Responsive Design
+  @media (max-width: 768px) {
+    .about-me {
+      margin: 2rem;
+      padding: 2rem;
+  
+      h1 {
+        font-size: 3rem; // Adjusted for smaller screens
+      }
+  
+      p {
+        font-size: 1.3rem; // Adjusted for smaller screens
+      }
+  
+      .social-links {
+        flex-direction: column;
+        gap: 1.5rem;
+  
+        a {
+          font-size: 1.3rem; // Adjusted for smaller screens
+        }
+      }
+  
+      .profile-image {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-me {
+      padding: 1.5rem;
+  
+      h1 {
+        font-size: 2.5rem; // Adjusted for mobile screens
+      }
+  
+      p {
+        font-size: 1.1rem; // Adjusted for mobile screens
+      }
+  
+      .profile-image {
+        width: 130px;
+        height: 130px;
+      }
+    }
+  }
