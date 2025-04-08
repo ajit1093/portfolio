@@ -9,7 +9,7 @@ const Footer = () => {
         <p>&copy; {new Date().getFullYear()} Ajit Babar. All rights reserved.</p>
         <div className="social-links">
           <a
-            href="https://linkedin.com/in/yourprofile"
+            href="https://www.linkedin.com/in/ajit-babar-241353301/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
@@ -17,7 +17,7 @@ const Footer = () => {
             <FaLinkedin className="social-icon" />
           </a>
           <a
-            href="https://github.com/yourprofile"
+            href="https://github.com/ajit1093"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
@@ -25,7 +25,7 @@ const Footer = () => {
             <FaGithub className="social-icon" />
           </a>
           <a
-            href="https://twitter.com/yourprofile"
+            href="https://x.com/ajitbabar1093?t=yY0n_yAF18iURgntyizOtg&s=09"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Twitter"
@@ -33,7 +33,7 @@ const Footer = () => {
             <FaTwitter className="social-icon" />
           </a>
           <a
-            href="https://instagram.com/yourprofile"
+            href="https://www.instagram.com/babar_ajit_1093/profilecard/?igsh=YTdtZ2hrYzZ2ODB3"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"

@@ -1,13 +1,14 @@
 import React from 'react';
 import './About.scss';
 import AjitImage from "../../assets/ajit.jpg";
+import about from"../../assets/developer.jpg";
 
 const AboutMe = () => {
   return (
     <div className="about-me">
       <div className="profile-section">
         <div className="profile-image">
-          <img src={AjitImage} alt="Ajit Shirish Babar" />
+          <img src={about} alt="Ajit Shirish Babar" />
         </div>
         <h1>About Me</h1>
       </div>
@@ -24,9 +25,9 @@ const AboutMe = () => {
         </p>
 
         <div className="social-links">
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">Twitter</a>
+          <a href="https://github.com/ajit1093" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/ajit-babar-241353301/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://www.instagram.com/babar_ajit_1093/profilecard/?igsh=YTdtZ2hrYzZ2ODB3" target="_blank" rel="noopener noreferrer">Instagram</a>
         </div>
       </div>
     </div>

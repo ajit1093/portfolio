@@ -1,129 +1,107 @@
 .navbar {
-    background-color: #181818;
-    height: 80px;
+  background-color: #181818;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  width: 100%;
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  &__container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    font-size: 1.2rem;
+    justify-content: space-between;
     width: 100%;
-    padding: 0 20px;
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-  
-    &__container {
+
+    &__logo {
+      color: var(--yellow-theme-main-color);
+      cursor: pointer;
+      font-size: 2rem;
+      font-weight: bold;
       display: flex;
       align-items: center;
-      width: 100%;
-      height: inherit;
-      justify-content: space-between;
-  
-      &__logo {
-        color: var(--yellow-theme-main-color);
-        cursor: pointer;
-        font-size: 2rem;
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-      }
-  
-      &__menu {
-        display: flex;
-        list-style: none;
-        text-align: center;
-        padding: 0;
-        margin: 0;
-  
-        &__item {
-          line-height: 40px;
-          margin-right: 1.5rem;
-          font-size: 1.6rem;
-          cursor: pointer;
-          background-color: #181818;
-  
-          & a {
-            text-decoration: none;
-            color: var(--yellow-theme-main-color);
-            transition: color 0.3s ease;
-          }
-  
-          & a:hover {
-            color: white;
-          }
-  
-          &::after {
-            content: '';
-            display: block;
-            height: 3px;
-            width: 0;
-            background: transparent;
-            transition: all 0.5s ease;
-          }
-  
-          &:hover::after {
-            width: 100%;
-            background: var(--yellow-theme-main-color);
-          }
-  
-          &__links {
-            color: var(--yellow-theme-main-color);
-            text-decoration: none;
-            padding: 0.5rem;
-          }
-        }
-      }
     }
-  }
-  
-  .nav-icon {
-    display: none;
-    cursor: pointer;
-    color: var(--yellow-theme-main-color);
-    z-index: 1001;
-  }
-  
-  @media only screen and (max-width: 768px) {
-    .navbar__container__menu {
+
+    &__menu {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      width: 100%;
-      height: auto;
-      position: absolute;
-      top: 80px;
-      left: -110%;
-      opacity: 1;
-      transition: all 0.5s ease;
-  
-      &.active {
-        background: #181818;
-        left: 0;
-        opacity: 1;
-      }
-  
+      align-items: center;
+      list-style: none;
+
       &__item {
-        border-bottom: 1px solid #282828;
-        margin: 0;
-        padding: 15px 20px; // 👈 Reduced padding
-        background-color: #181818;
-        width: 100%;
-  
-        a {
-          font-size: 1.2rem; // 👈 Smaller font size
+        margin-right: 1.5rem;
+        font-size: 1.6rem;
+
+        &__links {
+          color: var(--yellow-theme-main-color);
+          text-decoration: none;
           display: flex;
           align-items: center;
-          gap: 8px;
-  
-          svg {
-            font-size: 1.2rem; // 👈 Smaller icon size
+          gap: 0.5rem;
+          padding: 0.5rem;
+          transition: all 0.3s ease;
+
+          &:hover {
+            color: white;
           }
+        }
+
+        // 🔥 Active Link Styling
+        &__links.active-link {
+          color: white;
+          // font-weight: bold;
+          border-bottom: 2px solid var(--yellow-theme-main-color);
         }
       }
     }
-  
-    .nav-icon {
-      display: block;
+  }
+}
+
+.nav-icon {
+  display: none;
+  cursor: pointer;
+  color: var(--yellow-theme-main-color);
+  z-index: 1001;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar__container__menu {
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    background-color: #181818;
+    transition: left 0.3s ease-in-out;
+
+    &.active {
+      left: 0;
+    }
+
+    &__item {
+      width: 100%;
+      padding: 15px 0;
+      text-align: center;
+
+      &__links {
+        width: 100%;
+        font-size: 1.4rem;
+        justify-content: center;
+      }
+
+      &__links.active-link {
+        color: white;
+        font-weight: bold;
+        border-bottom: 2px solid var(--yellow-theme-main-color);
+      }
     }
   }
-  
+
+  .nav-icon {
+    display: block;
+  }
+} 

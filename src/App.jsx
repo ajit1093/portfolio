@@ -14,6 +14,7 @@ import Skills from './Containers/Skills/Skills'
 import Navbar from './component/NavBar/NavBar'
 import ErrorPage from './Containers/errorPage/EroorPage'
 import Footer from './component/Footer/Footer'
+import Project from './Containers/Project/Project'
 
 function App() {
 
@@ -31,7 +32,9 @@ function App() {
         <Route  path='/' element={<Home/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/skills' element={<Skills/>}/>
+        <Route path='/project' element={<Project/>}/>
         <Route path='/contact' element={<Contact/>}/>
+        
         <Route path='*' element={<ErrorPage/>}/>
       </Routes>
      </div>
