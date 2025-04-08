@@ -3,6 +3,7 @@ import { FaBars, FaReact, FaHome, FaUser, FaCode, FaAngular, FaEnvelope } from "
 import { Link } from "react-router-dom";
 import { HiX } from "react-icons/hi";
 import "./NavBar.scss";
+import Logo from "../../assets/logo.png";
 
 const data = [
   { label: "HOME", to: "/", logo: <FaHome size={20} /> },
@@ -15,7 +16,6 @@ const Navbar = () => {
   const [toggleIcon, setToggleIcon] = useState(false);
 
   const HandleToggleIcon = () => {
-    console.log("Toggle icon clicked"); // Debugging
     setToggleIcon(!toggleIcon);
   };
 
@@ -23,9 +23,8 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar__container">
         <Link to="/" className="navbar__container__logo">
-        <FaAngular size={50}/>
+          <img src={Logo} alt="logo" style={{ height: "80px", width: "120px" }} />
         </Link>
-        
 
         <ul className={`navbar__container__menu ${toggleIcon ? "active" : ""}`}>
           {data.map((item, key) => (
@@ -37,7 +36,6 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Mobile Menu Icon */}
         <div className="nav-icon" onClick={HandleToggleIcon}>
           {toggleIcon ? <HiX size={30} /> : <FaBars size={30} />}
         </div>

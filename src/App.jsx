@@ -8,7 +8,7 @@ import './App.scss'
 import { Route, Routes } from 'react-router-dom'
 import Home from './Containers/Home/Home'
 import About from './Containers/About/About'
-import Education from './Containers/Education/Education'
+
 import Contact from './Containers/Contact/Contact'
 import Skills from './Containers/Skills/Skills'
 import Navbar from './component/NavBar/NavBar'
