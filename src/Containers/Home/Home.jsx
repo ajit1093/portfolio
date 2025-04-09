@@ -1,5 +1,5 @@
 import React from 'react';
-import './home.scss';
+import './Home.scss';
 import { useNavigate } from 'react-router-dom';
 import { FaFileDownload, FaEnvelope } from 'react-icons/fa';
 import AjitImage from '../../assets/ajit.jpg';
