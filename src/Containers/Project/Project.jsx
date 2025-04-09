@@ -8,14 +8,14 @@ const projects = [
   {
     title: "Portfolio Website",
     description: "A personal portfolio website built with React and SCSS showcasing my skills, projects, and contact info.",
-    link: "#",
+    link: "https://ajitbabar.netlify.app/",
     image: portfolio,
   },
   {
     title: "ShriKrishnaArogyam – Wellness Website",
     description: "A clean and calming website built for a massage therapy center to showcase their services, promote health and wellness, and enable client inquiries.",
     link: "https://www.shrikrishnaarogyammassagetherapy.com/",
-    image: massage // ✅ Updated image path
+    image: massage 
   },
   {
     title: "ERP System - Nebula Technology",
