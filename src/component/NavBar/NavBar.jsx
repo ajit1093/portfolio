@@ -39,14 +39,15 @@ const Navbar = () => {
         <ul className={`navbar__container__menu ${toggleIcon ? "active" : ""}`}>
           {data.map((item, key) => (
            <li key={key} className="navbar__container__menu__item">
-           <Link
-             className={`navbar__container__menu__item__links ${
-               location.pathname === item.to ? "active-link" : ""
-             }`}
-             to={item.to}
-           >
-             {item.icon} {item.label}
-           </Link>
+          <Link
+                className={`navbar__container__menu__item__links ${
+                  location.pathname === item.to ? "active-link" : ""
+                }`}
+                to={item.to}
+                onClick={() => setToggleIcon(false)} // 🔥 This is the only addition
+              >
+                {item.icon} {item.label}
+              </Link>
          </li>
           ))}
         </ul>
