@@ -22,7 +22,7 @@ const Home = () => {
           <h2>Frontend Developer</h2>
           <h3>
             Crafting beautiful and functional user experiences with modern web
-            technologies.
+            technologies..
           </h3>
           <div className="cta-buttons">
             <a href="/Ajit_resume (3).pdf" download="Ajit_resume(3).pdf">
