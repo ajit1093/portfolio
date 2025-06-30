@@ -1,7 +1,7 @@
 import React from 'react';
 import './About.scss';
 
-import about from"../../assets/developer.jpg";
+import about from"../../assets/ajitnew.jpg";
 
 const AboutMe = () => {
   return (

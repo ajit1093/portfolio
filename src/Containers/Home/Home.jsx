@@ -25,7 +25,7 @@ const Home = () => {
             technologies.
           </h3>
           <div className="cta-buttons">
-            <a href="/resume.pdf" download="Ajit_Resume.pdf">
+            <a href="/Ajit_resume (3).pdf" download="Ajit_resume(3).pdf">
               <button className='cta-button outline'>
                 <FaFileDownload style={{ marginRight: "8px" }} /> Resume
               </button>
